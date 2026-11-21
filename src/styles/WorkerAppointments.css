@@ -1,0 +1,1047 @@
+/* =========================================================
+   WORKER APPOINTMENTS PAGE
+========================================================= */
+
+.worker-appointments-page {
+  min-height: 100vh;
+  padding: 0 6% 40px;
+  box-sizing: border-box;
+  background-color: #f7fafc;
+  color: #16324f;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.worker-appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 30px;
+}
+
+.worker-appointments-header h1 {
+  margin: 0 0 6px;
+  color: #16324f;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.worker-appointments-header p {
+  margin: 0;
+  color: #657786;
+  font-size: 15px;
+}
+
+/* =========================================================
+   ERROR
+========================================================= */
+
+.worker-appointments-error {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 20px;
+  padding: 14px 18px;
+  box-sizing: border-box;
+
+  background-color: #fff5f5;
+  border: 1px solid #f0caca;
+  border-radius: 6px;
+
+  color: #c62828;
+  font-size: 14px;
+}
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.worker-appointments-tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  border-bottom: 1px solid #dfe7ed;
+}
+
+.worker-appointments-tabs button {
+  position: relative;
+
+  padding: 0 0 13px;
+
+  border: none;
+  background: transparent;
+
+  color: #71808d;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.worker-appointments-tabs button:hover {
+  color: #16324f;
+}
+
+.worker-appointments-tabs button.active {
+  color: #1565c0;
+}
+
+.worker-appointments-tabs button.active::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+
+  height: 2px;
+
+  background-color: #1565c0;
+}
+
+/* =========================================================
+   FILTERS
+========================================================= */
+
+.worker-appointments-filters {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto 25px;
+  padding: 20px 0;
+
+  border-bottom: 1px solid #e1e8ee;
+
+  box-sizing: border-box;
+}
+
+.worker-appointments-search,
+.worker-appointments-date-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.worker-appointments-search {
+  flex: 1;
+  min-width: 0;
+}
+
+.worker-appointments-date-filter {
+  width: 220px;
+  flex-shrink: 0;
+}
+
+.worker-appointments-search label,
+.worker-appointments-date-filter label {
+  color: #34495e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.worker-appointments-search input,
+.worker-appointments-date-filter input,
+.worker-appointments-date-filter select {
+  width: 100%;
+  height: 42px;
+
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  border: 1px solid #ccd9e2;
+  border-radius: 5px;
+
+  background-color: #ffffff;
+  color: #16324f;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+}
+
+.worker-appointments-search input::placeholder {
+  color: #8a9aa8;
+}
+
+.worker-appointments-search input:focus,
+.worker-appointments-date-filter input:focus,
+.worker-appointments-date-filter select:focus {
+  border-color: #5b9bd5;
+  box-shadow: 0 0 0 2px rgba(91, 155, 213, 0.12);
+}
+
+/* Status dropdown */
+
+.worker-appointments-date-filter select {
+  cursor: pointer;
+}
+
+/* =========================================================
+   CLEAR FILTER BUTTON
+========================================================= */
+
+.worker-appointments-clear-button {
+  height: 42px;
+  flex-shrink: 0;
+
+  padding: 0 18px;
+
+  border: 1px solid #ccd9e2;
+  border-radius: 5px;
+
+  background-color: #ffffff;
+  color: #34495e;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.worker-appointments-clear-button:hover {
+  background-color: #f3f7fa;
+  border-color: #b8c8d4;
+}
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.worker-appointments-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.worker-appointments-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  margin-bottom: 18px;
+}
+
+.worker-appointments-section-header h2 {
+  margin: 0 0 5px;
+
+  color: #16324f;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.worker-appointments-section-header p {
+  margin: 0;
+
+  color: #657786;
+  font-size: 14px;
+}
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.worker-appointments-loading {
+  padding: 45px;
+
+  background-color: #ffffff;
+  border: 1px solid #e1ebf2;
+  border-radius: 7px;
+
+  color: #657786;
+  font-size: 14px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.worker-appointments-empty {
+  padding: 45px;
+
+  background-color: #ffffff;
+  border: 1px solid #e1ebf2;
+  border-radius: 7px;
+
+  color: #657786;
+
+  text-align: center;
+}
+
+.worker-appointments-empty p {
+  margin: 0;
+}
+
+/* =========================================================
+   TABLE CONTAINER
+========================================================= */
+
+.worker-appointments-table-container {
+  width: 100%;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e1ebf2;
+  border-radius: 7px;
+
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.worker-appointments-table {
+  width: 100%;
+  min-width: 900px;
+
+  border-collapse: collapse;
+
+  background-color: #ffffff;
+}
+
+.worker-appointments-table thead {
+  background-color: #f8fbfd;
+}
+
+.worker-appointments-table th {
+  padding: 15px 18px;
+
+  border-bottom: 1px solid #e1ebf2;
+
+  color: #16324f;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  text-align: left;
+  white-space: nowrap;
+}
+
+.worker-appointments-table td {
+  padding: 16px 18px;
+
+  border-bottom: 1px solid #edf2f5;
+
+  color: #657786;
+
+  font-size: 14px;
+
+  vertical-align: middle;
+}
+
+.worker-appointments-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.worker-appointments-table tbody tr:hover {
+  background-color: #fbfdff;
+}
+
+.worker-appointments-table td strong {
+  color: #16324f;
+  font-weight: 600;
+}
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.worker-appointment-status {
+  display: inline-block;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.status-pending {
+  color: #ef6c00;
+}
+
+.status-confirmed {
+  color: #1565c0;
+}
+
+.status-in_progress {
+  color: #7b1fa2;
+}
+
+.status-completed {
+  color: #2e7d32;
+}
+
+.status-referred_doctor {
+  color: #1565c0;
+}
+
+.status-referred_clinic {
+  color: #ef6c00;
+}
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.worker-appointment-action-button {
+  min-height: 36px;
+
+  padding: 7px 14px;
+
+  border: 1px solid #1565c0;
+  border-radius: 5px;
+
+  background-color: #ffffff;
+  color: #1565c0;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition: 0.2s ease;
+}
+
+.worker-appointment-action-button:hover {
+  background-color: #1565c0;
+  color: #ffffff;
+}
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.worker-appointments-modal-overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background-color: rgba(22, 50, 79, 0.35);
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.worker-appointments-modal {
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e1ebf2;
+  border-radius: 8px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.worker-appointments-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 22px 26px;
+
+  border-bottom: 1px solid #e6eef5;
+
+  background-color: #ffffff;
+}
+
+.worker-appointments-modal-header h2 {
+  margin: 0 0 5px;
+
+  color: #16324f;
+
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.worker-appointments-modal-header p {
+  margin: 0;
+
+  color: #657786;
+
+  font-size: 14px;
+}
+
+.worker-appointments-modal-header button {
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #657786;
+
+  font-size: 27px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.worker-appointments-modal-header button:hover {
+  color: #c62828;
+}
+
+/* =========================================================
+   MODAL BODY
+========================================================= */
+
+.worker-appointments-modal-body {
+  padding: 26px;
+
+  overflow-y: auto;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   DETAIL ROW
+========================================================= */
+
+.appointment-detail-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  margin-bottom: 18px;
+}
+
+.appointment-detail-row strong {
+  color: #657786;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.appointment-detail-row span {
+  color: #16324f;
+
+  font-size: 15px;
+
+  word-break: break-word;
+}
+
+/* =========================================================
+   DETAIL SECTION
+========================================================= */
+
+.appointment-detail-section {
+  margin-top: 22px;
+}
+
+.appointment-detail-section h3 {
+  margin: 0 0 8px;
+
+  color: #16324f;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.appointment-detail-section p {
+  margin: 0;
+
+  padding: 12px;
+
+  background-color: #f8fbfd;
+
+  border: 1px solid #e1ebf2;
+  border-radius: 5px;
+
+  color: #526779;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+}
+
+/* =========================================================
+   MODAL FOOTER
+========================================================= */
+
+.worker-appointments-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  padding: 16px 26px;
+
+  border-top: 1px solid #e6eef5;
+
+  background-color: #ffffff;
+}
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.worker-appointment-primary-button {
+  min-height: 40px;
+
+  padding: 0 18px;
+
+  border: 1px solid #1565c0;
+  border-radius: 5px;
+
+  background-color: #1565c0;
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.worker-appointment-primary-button:hover {
+  background-color: #0d47a1;
+  border-color: #0d47a1;
+}
+
+.worker-appointment-primary-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.worker-appointment-secondary-button {
+  min-height: 40px;
+
+  padding: 0 18px;
+
+  border: 1px solid #ccd9e2;
+  border-radius: 5px;
+
+  background-color: #ffffff;
+  color: #34495e;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.worker-appointment-secondary-button:hover {
+  background-color: #f3f7fa;
+}
+
+/* =========================================================
+   NURSE ASSESSMENT FORM
+========================================================= */
+
+.worker-appointments-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+
+  margin-top: 20px;
+}
+
+.worker-appointments-form-group label {
+  color: #16324f;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.worker-appointments-form-group textarea,
+.worker-appointments-form-group select {
+  width: 100%;
+
+  padding: 11px 13px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #ccd9e2;
+  border-radius: 6px;
+
+  background-color: #ffffff;
+  color: #16324f;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  outline: none;
+}
+
+.worker-appointments-form-group textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.worker-appointments-form-group textarea::placeholder {
+  color: #8a9aa8;
+}
+
+.worker-appointments-form-group textarea:focus,
+.worker-appointments-form-group select:focus {
+  border-color: #3b82c4;
+
+  box-shadow:
+    0 0 0 2px rgba(59, 130, 196, 0.12);
+}
+
+.worker-appointments-form-group select {
+  height: 42px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1000px) {
+  .worker-appointments-page {
+    padding: 35px 5%;
+  }
+
+  .worker-appointments-table {
+    min-width: 850px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .worker-appointments-page {
+    padding: 30px 5%;
+  }
+
+  /* Tabs */
+
+  .worker-appointments-tabs {
+    gap: 22px;
+
+    overflow-x: auto;
+  }
+
+  .worker-appointments-tabs button {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  /* Filters */
+
+  .worker-appointments-filters {
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .worker-appointments-search {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .worker-appointments-date-filter {
+    flex: 1;
+    width: auto;
+    min-width: 180px;
+  }
+
+  .worker-appointments-clear-button {
+    flex-shrink: 0;
+  }
+
+  /* Modal */
+
+  .worker-appointments-modal-overlay {
+    padding: 15px;
+  }
+
+  .worker-appointments-modal {
+    max-height: 92vh;
+  }
+
+  .worker-appointments-modal-header {
+    padding: 20px;
+  }
+
+  .worker-appointments-modal-body {
+    padding: 20px;
+  }
+
+  .worker-appointments-modal-footer {
+    padding: 15px 20px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .worker-appointments-page {
+    padding: 25px 4%;
+  }
+
+  .worker-appointments-header {
+    margin-bottom: 22px;
+  }
+
+  .worker-appointments-header h1 {
+    font-size: 26px;
+  }
+
+  .worker-appointments-header p {
+    font-size: 14px;
+  }
+
+  /* Filters */
+
+  .worker-appointments-date-filter {
+    width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
+  }
+
+  .worker-appointments-clear-button {
+    width: 100%;
+  }
+
+  /* Table */
+
+  .worker-appointments-table {
+    min-width: 850px;
+  }
+
+  /* Section */
+
+  .worker-appointments-section-header h2 {
+    font-size: 18px;
+  }
+
+  /* Modal */
+
+  .worker-appointments-modal-footer {
+    flex-direction: column-reverse;
+  }
+
+  .worker-appointment-primary-button,
+  .worker-appointment-secondary-button {
+    width: 100%;
+  }
+}
+
+/* =================================
+   OPTIONAL AI NURSE ASSISTANCE
+================================= */
+
+.nurse-ai-assistance {
+  margin: 24px 0;
+  padding: 20px;
+  background: #f4f8fc;
+  border: 1px solid #d9e5f2;
+  border-radius: 10px;
+}
+
+.nurse-ai-assistance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 16px;
+}
+
+.nurse-ai-assistance-header h3 {
+  color: #16324f;
+  font-size: 18px;
+  margin: 0 0 7px;
+}
+
+.nurse-ai-assistance-header p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.nurse-ai-label {
+  background: #e0edff;
+  color: #245b94;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.nurse-ai-button {
+  width: 100%;
+  padding: 12px 18px;
+  background: #245b94;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.nurse-ai-button:hover:not(:disabled) {
+  background: #163f6b;
+}
+
+.nurse-ai-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.nurse-ai-loading {
+  margin-top: 15px;
+  padding: 12px;
+  background: #e8f1fb;
+  border-radius: 7px;
+  color: #245b94;
+  font-size: 13px;
+}
+
+.nurse-ai-loading p {
+  margin: 0;
+}
+
+.nurse-ai-error {
+  margin-top: 15px;
+  padding: 12px;
+  background: #fff1f0;
+  border: 1px solid #f3c5c1;
+  border-radius: 7px;
+  color: #b42318;
+  font-size: 13px;
+}
+
+.nurse-ai-result {
+  margin-top: 18px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #d9e5f2;
+  border-radius: 8px;
+}
+
+.nurse-ai-result h4 {
+  color: #16324f;
+  font-size: 16px;
+  margin: 0 0 14px;
+}
+
+.nurse-ai-suggestions {
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.nurse-ai-disclaimer {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* AI-generated suggestions formatting */
+
+.worker-ai-suggestions {
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.worker-ai-suggestions h1,
+.worker-ai-suggestions h2,
+.worker-ai-suggestions h3,
+.worker-ai-suggestions h4 {
+  margin-top: 12px;
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.worker-ai-suggestions p {
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+.worker-ai-suggestions ul {
+  margin-top: 3px;
+  margin-bottom: 8px;
+  padding-left: 20px;
+}
+
+.worker-ai-suggestions li {
+  margin-bottom: 3px;
+}
+
+.worker-ai-suggestions > :first-child {
+  margin-top: 0;
+}
+
+.worker-ai-suggestions > :last-child {
+  margin-bottom: 0;
+}

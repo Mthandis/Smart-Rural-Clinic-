@@ -1,0 +1,284 @@
+
+.feedback-section {
+  margin-top: 30px;
+}
+
+.feedback-form {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 850px;
+}
+
+.feedback-form > label {
+  font-weight: 600;
+  color: #263445;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  resize: vertical;
+  font: inherit;
+  outline: none;
+}
+
+.feedback-form textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.feedback-form small {
+  color: #6b7280;
+  text-align: right;
+  margin-top: -10px;
+}
+
+.feedback-ratings {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.rating-option {
+  padding: 12px 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.rating-option:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.rating-option.selected {
+  border: 2px solid #2563eb;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.anonymous-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+}
+
+.anonymous-option input {
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+}
+
+.feedback-privacy {
+  color: #6b7280;
+  font-size: 13px;
+  margin: 0;
+}
+
+.feedback-submit {
+  padding: 13px 20px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.feedback-submit:hover {
+  background: #1d4ed8;
+}
+
+.feedback-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feedback-message {
+  padding: 12px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .feedback-form {
+    padding: 16px;
+  }
+
+  .feedback-ratings {
+    flex-direction: column;
+  }
+
+  .rating-option {
+    width: 100%;
+  }
+}
+
+.submit-feedback-nav {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.submit-feedback-nav:hover {
+  background: #1d4ed8;
+}
+
+#patient-feedback {
+  scroll-margin-top: 30px;
+}
+
+/* SENTIMENT ANALYSIS RESULT */
+
+.sentiment-result {
+  margin-top: 25px;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  max-width: 850px;
+}
+
+.sentiment-result h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.sentiment-result p {
+  color: #64748b;
+  margin-bottom: 18px;
+}
+
+.sentiment-status {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.sentiment-status.positive {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.sentiment-status.negative {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.sentiment-status.neutral {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.sentiment-score {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  padding: 12px 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.sentiment-score strong {
+  font-size: 20px;
+}
+
+.sentiment-result small {
+  display: block;
+  color: #64748b;
+  margin-top: 10px;
+}
+
+/* SUCCESS POPUP OVERLAY */
+
+.feedback-popup-overlay {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  z-index: 999999 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* SUCCESS POPUP */
+
+.feedback-success-popup {
+  background: #ffffff;
+  width: 90%;
+  max-width: 400px;
+  padding: 35px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+  animation: feedbackPopupShow 0.35s ease-out;
+}
+
+/* GREEN TICK */
+
+.success-tick {
+  width: 80px;
+  height: 80px;
+  background: #dcfce7;
+  color: #16a34a;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.feedback-success-popup h2 {
+  color: #166534;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feedback-success-popup p {
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@keyframes feedbackPopupShow {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+

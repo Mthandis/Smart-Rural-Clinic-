@@ -1,0 +1,301 @@
+.register-page {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.register-section {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  justify-content: center;
+  padding: 60px 5%;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #ffffff, #f3f9fd);
+}
+
+.register-content {
+  width: 100%;
+  max-width: 520px;
+}
+
+.register-label {
+  color: #1565c0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.register-content h1 {
+  color: #16324f;
+  font-size: 36px;
+  text-align: center;
+  margin: 0 0 15px;
+}
+
+.register-description {
+  color: #657786;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: #16324f;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  border: 1px solid #d5e1e9;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #1565c0;
+}
+
+.register-button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1565c0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.register-button:hover {
+  background-color: #0d47a1;
+}
+
+.login-text {
+  color: #657786;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 25px;
+}
+
+.login-text a {
+  color: #1565c0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-text a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .register-section {
+    padding: 40px 5%;
+  }
+
+  .register-content h1 {
+    font-size: 30px;
+  }
+}
+/* =========================
+   CLINIC SEARCH DROPDOWN
+========================= */
+
+.clinic-dropdown-group {
+  position: relative;
+}
+
+.clinic-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.clinic-search-wrapper {
+  position: relative;
+}
+
+.clinic-search-wrapper input {
+  padding-right: 40px;
+}
+
+.clinic-dropdown-arrow {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #687786;
+  font-size: 17px;
+  pointer-events: none;
+}
+
+.clinic-dropdown-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  max-height: 190px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #ccd8e3;
+  border-radius: 5px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.10);
+  z-index: 1000;
+}
+
+.clinic-dropdown-option {
+  width: 100%;
+  padding: 11px 13px;
+  border: none;
+  border-bottom: 1px solid #edf1f5;
+  background-color: #ffffff;
+  color: #333333;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.clinic-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.clinic-dropdown-option:hover {
+  background-color: #f0f7ff;
+  color: #1565c0;
+}
+
+.no-clinic-results {
+  padding: 12px 13px;
+  color: #888888;
+  font-size: 13px;
+}
+
+/* PASSWORD REQUIREMENTS */
+.password-requirements {
+  display: block;
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* REGISTRATION SUCCESS POPUP */
+.registration-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.registration-success-modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 430px;
+  padding: 35px 30px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  animation: modalAppear 0.3s ease;
+}
+
+.success-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 18px;
+  background: #e6f7ed;
+  color: #16a34a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.registration-success-modal h2 {
+  color: #1e293b;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.registration-success-modal p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.modal-login-text {
+  margin-top: 18px;
+}
+
+.modal-login-button,
+.modal-thankyou-button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.modal-login-button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  margin-top: 10px;
+}
+
+.modal-login-button:hover {
+  background: #1d4ed8;
+}
+
+.modal-thankyou-button {
+  background: #ffffff;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+  margin-top: 10px;
+}
+
+.modal-thankyou-button:hover {
+  background: #eff6ff;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

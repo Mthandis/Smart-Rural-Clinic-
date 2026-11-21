@@ -1,0 +1,851 @@
+.manage-medicine-page {
+min-height: 100vh;
+background-color: #f7f9fb;
+}
+
+/* =========================
+MAIN CONTENT
+========================= */
+
+.manage-medicine-content {
+margin-left: 245px;
+
+min-height: 100vh;
+
+padding: 24px 30px;
+
+box-sizing: border-box;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.manage-medicine-header {
+display: flex;
+
+align-items: center;
+justify-content: space-between;
+
+gap: 15px;
+
+margin-bottom: 20px;
+}
+
+.manage-medicine-header h1 {
+margin: 0 0 5px;
+
+font-size: 24px;
+font-weight: 700;
+
+color: #16324f;
+}
+
+.manage-medicine-header p {
+margin: 0;
+
+font-size: 13px;
+
+color: #6b7c8f;
+}
+
+/* =========================
+ADD BUTTON
+========================= */
+
+.manage-medicine-add-button {
+min-height: 38px;
+
+padding: 0 15px;
+
+border: 1px solid #2563a6;
+border-radius: 5px;
+
+background-color: #2563a6;
+color: #ffffff;
+
+font-size: 13px;
+font-weight: 600;
+
+cursor: pointer;
+
+white-space: nowrap;
+}
+
+.manage-medicine-add-button:hover {
+background-color: #1d4f86;
+
+border-color: #1d4f86;
+}
+
+/* =========================
+SEARCH AND FILTERS
+========================= */
+
+.manage-medicine-filters {
+display: flex;
+
+align-items: flex-end;
+
+gap: 12px;
+
+margin-bottom: 18px;
+
+width: 100%;
+}
+
+.manage-medicine-search,
+.manage-medicine-clinic-filter {
+display: flex;
+
+flex-direction: column;
+
+gap: 5px;
+}
+
+.manage-medicine-search {
+width: 320px;
+}
+
+.manage-medicine-clinic-filter {
+width: 210px;
+}
+
+.manage-medicine-search label,
+.manage-medicine-clinic-filter label {
+font-size: 12px;
+
+font-weight: 600;
+
+color: #34495e;
+}
+
+.manage-medicine-search input,
+.manage-medicine-clinic-filter select {
+width: 100%;
+
+height: 38px;
+
+box-sizing: border-box;
+
+padding: 0 10px;
+
+border: 1px solid #ccd9e2;
+
+border-radius: 5px;
+
+background-color: #ffffff;
+
+color: #16324f;
+
+font-size: 13px;
+
+outline: none;
+}
+
+.manage-medicine-search input:focus,
+.manage-medicine-clinic-filter select:focus {
+border-color: #5b9bd5;
+
+box-shadow: 0 0 0 2px rgba(91, 155, 213, 0.12);
+}
+
+/* =========================
+CLEAR FILTERS
+========================= */
+
+.manage-medicine-clear-button {
+height: 38px;
+
+padding: 0 14px;
+
+border: 1px solid #2563a6;
+
+border-radius: 5px;
+
+background-color: #2563a6;
+
+color: #ffffff;
+
+font-size: 13px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+white-space: nowrap;
+}
+
+.manage-medicine-clear-button:hover {
+background-color: #1d4f86;
+
+border-color: #1d4f86;
+}
+
+/* =========================
+MESSAGES
+========================= */
+
+.manage-medicine-message,
+.manage-medicine-empty,
+.manage-medicine-error {
+background-color: #ffffff;
+
+border: 1px solid #e1e8ee;
+
+border-radius: 6px;
+
+padding: 18px;
+
+font-size: 13px;
+
+color: #5f7182;
+}
+
+.manage-medicine-error {
+color: #b42318;
+
+border-color: #f0c7c3;
+
+background-color: #fff8f7;
+}
+
+/* =========================
+TABLE
+========================= */
+
+.manage-medicine-table-container {
+width: 100%;
+
+background-color: #ffffff;
+
+border: 1px solid #e1e8ee;
+
+border-radius: 6px;
+
+overflow-x: auto;
+}
+
+.manage-medicine-table {
+width: 100%;
+
+border-collapse: collapse;
+
+font-size: 13px;
+}
+
+.manage-medicine-table th {
+padding: 11px 12px;
+
+text-align: left;
+
+background-color: #f5f8fa;
+
+color: #34495e;
+
+font-size: 12px;
+
+font-weight: 600;
+
+border-bottom: 1px solid #e1e8ee;
+
+white-space: nowrap;
+}
+
+.manage-medicine-table td {
+padding: 10px 12px;
+
+color: #4a5d6d;
+
+border-bottom: 1px solid #edf1f4;
+
+vertical-align: middle;
+
+white-space: nowrap;
+}
+
+.manage-medicine-table tbody tr:last-child td {
+border-bottom: none;
+}
+
+.manage-medicine-table tbody tr:hover {
+background-color: #fafcfd;
+}
+
+/* =========================
+STATUS
+========================= */
+
+.medicine-status {
+display: inline-flex;
+
+align-items: center;
+
+padding: 4px 8px;
+
+border-radius: 10px;
+
+font-size: 11px;
+
+font-weight: 600;
+
+text-transform: capitalize;
+
+white-space: nowrap;
+}
+
+.medicine-status.available {
+background-color: #e8f5e9;
+
+color: #2e7d32;
+}
+
+.medicine-status.low {
+background-color: #fff8e1;
+
+color: #a66a00;
+}
+
+.medicine-status.out {
+background-color: #ffebee;
+
+color: #c62828;
+}
+
+/* =========================
+ACTIONS
+========================= */
+
+.manage-medicine-actions {
+display: flex;
+
+align-items: center;
+
+gap: 6px;
+
+white-space: nowrap;
+}
+
+.manage-medicine-edit-button,
+.manage-medicine-delete-button {
+min-height: 30px;
+
+padding: 0 10px;
+
+border-radius: 4px;
+
+font-size: 12px;
+
+font-weight: 600;
+
+cursor: pointer;
+
+white-space: nowrap;
+}
+
+.manage-medicine-edit-button {
+border: 1px solid #2563a6;
+
+background-color: #ffffff;
+
+color: #2563a6;
+}
+
+.manage-medicine-edit-button:hover {
+background-color: #eef5fb;
+}
+
+.manage-medicine-delete-button {
+border: 1px solid #c62828;
+
+background-color: #ffffff;
+
+color: #c62828;
+}
+
+.manage-medicine-delete-button:hover {
+background-color: #fff1f1;
+}
+
+/* =========================
+MODAL OVERLAY
+========================= */
+
+.manage-medicine-modal-overlay {
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+height: 100%;
+
+background-color: rgba(15, 30, 45, 0.45);
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+padding: 20px;
+
+box-sizing: border-box;
+
+z-index: 1000;
+}
+
+/* =========================
+ADD / EDIT MODAL
+========================= */
+
+.manage-medicine-modal {
+width: 520px;
+
+max-width: 95vw;
+
+background-color: #ffffff;
+
+border-radius: 7px;
+
+overflow: hidden;
+
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+MODAL HEADER
+========================= */
+
+.manage-medicine-modal-header {
+display: flex;
+
+align-items: center;
+justify-content: space-between;
+
+padding: 18px 22px;
+
+border-bottom: 1px solid #e1e8ee;
+}
+
+.manage-medicine-modal-header h2 {
+margin: 0 0 4px;
+
+font-size: 19px;
+
+color: #16324f;
+}
+
+.manage-medicine-modal-header p {
+margin: 0;
+
+font-size: 12px;
+
+color: #718394;
+}
+
+.manage-medicine-modal-close {
+width: 32px;
+height: 32px;
+
+border: none;
+
+border-radius: 5px;
+
+background-color: #f3f7fa;
+
+color: #526576;
+
+font-size: 22px;
+
+cursor: pointer;
+}
+
+.manage-medicine-modal-close:hover {
+background-color: #e8eef3;
+}
+
+/* =========================
+FORM
+========================= */
+
+.manage-medicine-form {
+padding: 22px;
+}
+
+.manage-medicine-form-group {
+display: flex;
+
+flex-direction: column;
+
+gap: 6px;
+
+margin-bottom: 16px;
+}
+
+.manage-medicine-form-group label {
+font-size: 12px;
+
+font-weight: 600;
+
+color: #34495e;
+}
+
+.manage-medicine-form-group input,
+.manage-medicine-form-group select {
+width: 100%;
+
+height: 40px;
+
+box-sizing: border-box;
+
+padding: 0 11px;
+
+border: 1px solid #ccd9e2;
+
+border-radius: 5px;
+
+background-color: #ffffff;
+
+color: #16324f;
+
+font-size: 13px;
+
+outline: none;
+}
+
+.manage-medicine-form-group input:focus,
+.manage-medicine-form-group select:focus {
+border-color: #5b9bd5;
+
+box-shadow: 0 0 0 2px rgba(91, 155, 213, 0.12);
+}
+
+.manage-medicine-form-group input[readonly] {
+background-color: #f5f8fa;
+
+color: #718394;
+
+cursor: not-allowed;
+}
+
+/* =========================
+FORM BUTTONS
+========================= */
+
+.manage-medicine-form-actions {
+display: flex;
+
+justify-content: flex-end;
+
+gap: 10px;
+
+margin-top: 22px;
+}
+
+.manage-medicine-cancel-button,
+.manage-medicine-save-button {
+min-height: 38px;
+
+padding: 0 15px;
+
+border-radius: 5px;
+
+font-size: 13px;
+
+font-weight: 600;
+
+cursor: pointer;
+}
+
+.manage-medicine-cancel-button {
+border: 1px solid #ccd9e2;
+
+background-color: #ffffff;
+
+color: #526576;
+}
+
+.manage-medicine-cancel-button:hover {
+background-color: #f5f8fa;
+}
+
+.manage-medicine-save-button {
+border: 1px solid #2563a6;
+
+background-color: #2563a6;
+
+color: #ffffff;
+}
+
+.manage-medicine-save-button:hover {
+background-color: #1d4f86;
+
+border-color: #1d4f86;
+}
+
+/* =========================
+CONFIRMATION MODAL
+========================= */
+
+.manage-medicine-confirm-modal {
+width: 420px;
+
+max-width: 95vw;
+
+padding: 28px;
+
+box-sizing: border-box;
+
+background-color: #ffffff;
+
+border-radius: 7px;
+
+text-align: center;
+
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.manage-medicine-confirm-icon {
+width: 44px;
+height: 44px;
+
+margin: 0 auto 14px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background-color: #eef5fb;
+
+color: #2563a6;
+
+font-size: 20px;
+
+font-weight: 700;
+}
+
+.manage-medicine-confirm-modal h2 {
+margin: 0 0 9px;
+
+font-size: 19px;
+
+color: #16324f;
+}
+
+.manage-medicine-confirm-modal p {
+margin: 0 auto;
+
+max-width: 340px;
+
+font-size: 13px;
+
+line-height: 1.6;
+
+color: #5f7182;
+}
+
+.manage-medicine-confirm-actions {
+display: flex;
+
+justify-content: center;
+
+gap: 10px;
+
+margin-top: 22px;
+}
+
+.manage-medicine-confirm-cancel,
+.manage-medicine-confirm-ok {
+min-width: 88px;
+
+min-height: 38px;
+
+padding: 0 15px;
+
+border-radius: 5px;
+
+font-size: 13px;
+
+font-weight: 600;
+
+cursor: pointer;
+}
+
+.manage-medicine-confirm-cancel {
+border: 1px solid #ccd9e2;
+
+background-color: #ffffff;
+
+color: #526576;
+}
+
+.manage-medicine-confirm-cancel:hover {
+background-color: #f5f8fa;
+}
+
+.manage-medicine-confirm-ok {
+border: 1px solid #2563a6;
+
+background-color: #2563a6;
+
+color: #ffffff;
+}
+
+.manage-medicine-confirm-ok:hover {
+background-color: #1d4f86;
+
+border-color: #1d4f86;
+}
+
+/* =========================
+DUPLICATE MEDICINE MODAL
+========================= */
+
+.manage-medicine-duplicate-modal {
+width: 420px;
+
+max-width: 95vw;
+
+padding: 28px;
+
+box-sizing: border-box;
+
+background-color: #ffffff;
+
+border-radius: 7px;
+
+text-align: center;
+
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
+}
+
+.manage-medicine-duplicate-icon {
+width: 44px;
+height: 44px;
+
+margin: 0 auto 14px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background-color: #fff4e5;
+
+color: #b76e00;
+
+font-size: 20px;
+
+font-weight: 700;
+}
+
+.manage-medicine-duplicate-modal h2 {
+margin: 0 0 10px;
+
+font-size: 19px;
+
+color: #16324f;
+}
+
+.manage-medicine-duplicate-modal p {
+margin: 0 auto 8px;
+
+max-width: 350px;
+
+font-size: 13px;
+
+line-height: 1.6;
+
+color: #5f7182;
+}
+
+.manage-medicine-duplicate-modal p:last-of-type {
+margin-bottom: 20px;
+}
+
+.manage-medicine-duplicate-ok {
+min-width: 88px;
+
+min-height: 38px;
+
+padding: 0 16px;
+
+border: 1px solid #2563a6;
+
+border-radius: 5px;
+
+background-color: #2563a6;
+
+color: #ffffff;
+
+font-size: 13px;
+
+font-weight: 600;
+
+cursor: pointer;
+}
+
+.manage-medicine-duplicate-ok:hover {
+background-color: #1d4f86;
+
+border-color: #1d4f86;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+.manage-medicine-content {
+margin-left: 215px;
+
+```
+padding: 22px;
+```
+
+}
+
+.manage-medicine-search {
+width: 280px;
+}
+
+.manage-medicine-clinic-filter {
+width: 190px;
+}
+}
+
+@media (max-width: 750px) {
+
+.manage-medicine-content {
+margin-left: 190px;
+
+```
+padding: 18px;
+```
+
+}
+
+.manage-medicine-header {
+align-items: flex-start;
+
+```
+flex-direction: column;
+```
+
+}
+
+.manage-medicine-filters {
+flex-wrap: wrap;
+}
+
+.manage-medicine-search,
+.manage-medicine-clinic-filter {
+width: 220px;
+}
+}

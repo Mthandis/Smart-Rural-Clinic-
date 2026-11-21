@@ -1,0 +1,415 @@
+
+.patient-profile-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+.patient-profile-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 30px 60px;
+}
+
+.patient-profile-header {
+  margin-bottom: 28px;
+}
+
+.patient-profile-header h1 {
+  color: #172554;
+  font-size: 27px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.patient-profile-header p {
+  color: #64748b;
+  font-size: 14px;
+  margin: 0;
+}
+
+.patient-profile-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.patient-profile-card-header {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 25px 30px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.patient-profile-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.patient-profile-avatar svg {
+  width: 30px;
+  height: 30px;
+}
+
+.patient-profile-card-header h2 {
+  color: #172554;
+  font-size: 19px;
+  margin: 0 0 5px;
+}
+
+.patient-profile-card-header span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+.patient-profile-section {
+  padding: 27px 30px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.patient-profile-section:last-child {
+  border-bottom: none;
+}
+
+.patient-profile-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 24px;
+}
+
+.patient-profile-section-heading h3 {
+  color: #172554;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.patient-profile-section-heading p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+.patient-profile-readonly {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.patient-profile-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.patient-profile-field label {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.patient-profile-field div {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  padding: 10px 13px;
+  border: 1px solid #e2e8f0;
+  border-radius: 7px;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.patient-profile-no-clinic {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.patient-profile-password-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.patient-profile-password-row strong {
+  display: block;
+  color: #334155;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.patient-profile-password-row p {
+  color: #64748b;
+  font-size: 13px;
+  margin: 0;
+}
+
+.patient-profile-password-row button {
+  border: none;
+  border-radius: 7px;
+  background: #2563eb;
+  color: #ffffff;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.patient-profile-password-row button:hover {
+  background: #1d4ed8;
+}
+
+.patient-profile-message,
+.patient-profile-error {
+  padding: 18px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.patient-profile-message {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.patient-profile-error {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+@media (max-width: 650px) {
+  .patient-profile-content {
+    padding: 25px 16px 40px;
+  }
+
+  .patient-profile-card-header,
+  .patient-profile-section {
+    padding: 22px 18px;
+  }
+
+  .patient-profile-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-profile-password-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.patient-profile-field input {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.patient-profile-field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.patient-profile-edit-btn,
+.patient-profile-save-btn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-profile-edit-btn:hover,
+.patient-profile-save-btn:hover {
+  background: #1d4ed8;
+}
+
+.patient-profile-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.patient-profile-cancel-btn {
+  background: #ffffff;
+  color: #475569;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.patient-profile-save-btn:disabled,
+.patient-profile-cancel-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.patient-profile-success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+/* SUCCESS MODAL */
+.profile-success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.profile-success-modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 35px 25px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  animation: profileModalAppear 0.25s ease;
+}
+
+.profile-success-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #16a34a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.profile-success-modal h2 {
+  color: #1e293b;
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.profile-success-modal p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+.profile-success-modal button {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 11px 35px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile-success-modal button:hover {
+  background: #1d4ed8;
+}
+
+@keyframes profileModalAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-password-modal {
+  background: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  animation: profileModalAppear 0.25s ease;
+}
+
+.profile-password-modal h2 {
+  color: #1e293b;
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.profile-password-modal > p {
+  color: #64748b;
+  font-size: 14px;
+  margin-bottom: 22px;
+}
+
+.password-modal-field {
+  margin-bottom: 17px;
+}
+
+.password-modal-field label {
+  display: block;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.password-modal-field input {
+  width: 100%;
+  padding: 11px 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+.password-modal-field input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.password-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.password-modal-actions button {
+  cursor: pointer;
+}

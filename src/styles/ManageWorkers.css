@@ -1,0 +1,348 @@
+/* =========================
+   PAGE
+   ========================= */
+
+.manage-workers-page {
+  min-height: 100vh;
+  background-color: #f8fbff;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.manage-workers-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.back-button {
+  border: none;
+  background: transparent;
+  color: #1565c0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.back-button:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.manage-workers-header {
+  margin-bottom: 30px;
+}
+
+.manage-workers-header p {
+  color: #1565c0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.manage-workers-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #273444;
+}
+
+.manage-workers-header span {
+  color: #6b7785;
+  font-size: 14px;
+}
+
+
+/* =========================
+   FORM
+   ========================= */
+
+.manage-workers-form {
+  background-color: #ffffff;
+  border: 1px solid #e1eaf2;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #273444;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #ccd8e3;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #1565c0;
+  box-shadow: 0 0 0 2px rgba(21, 101, 192, 0.08);
+}
+
+.form-group input::placeholder {
+  color: #9aa5af;
+}
+
+
+/* =========================
+   SEARCHABLE CLINIC
+   ========================= */
+
+.clinic-dropdown-group {
+  position: relative;
+}
+
+.clinic-dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.clinic-search-wrapper {
+  position: relative;
+}
+
+.clinic-search-wrapper input {
+  padding-right: 40px;
+  cursor: text;
+}
+
+.clinic-dropdown-arrow {
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #687786;
+  font-size: 17px;
+  pointer-events: none;
+}
+
+.clinic-dropdown-list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  max-height: 190px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #ccd8e3;
+  border-radius: 5px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.10);
+  z-index: 1000;
+}
+
+.clinic-dropdown-option {
+  width: 100%;
+  padding: 11px 13px;
+  border: none;
+  border-bottom: 1px solid #edf1f5;
+  background-color: #ffffff;
+  color: #333333;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.clinic-dropdown-option:last-child {
+  border-bottom: none;
+}
+
+.clinic-dropdown-option:hover {
+  background-color: #f0f7ff;
+  color: #1565c0;
+}
+
+.no-clinic-results {
+  padding: 12px 13px;
+  color: #888888;
+  font-size: 13px;
+}
+
+
+/* =========================
+   ERROR
+   ========================= */
+
+.error-message {
+  background-color: #fff2f2;
+  border: 1px solid #f1c7c7;
+  color: #c62828;
+  padding: 11px 13px;
+  font-size: 13px;
+  margin: 0 0 20px;
+}
+
+
+/* =========================
+   FORM BUTTONS
+   ========================= */
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.cancel-worker-button {
+  padding: 11px 22px;
+  border: 1px solid #9aa7b2;
+  border-radius: 5px;
+  background-color: #e9eef3;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-worker-button:hover {
+  background-color: #dce3e9;
+}
+
+.save-worker-button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1565c0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-worker-button:hover {
+  background-color: #0d47a1;
+}
+
+
+/* =========================
+   SUCCESS POPUP
+   ========================= */
+
+.worker-success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.worker-success-popup {
+  width: 400px;
+  max-width: 90%;
+  background-color: #ffffff;
+  border-top: 5px solid #2e7d32;
+  padding: 35px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.worker-success-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.worker-success-popup h2 {
+  margin: 0 0 10px;
+  color: #2e7d32;
+  font-size: 22px;
+}
+
+.worker-success-popup p {
+  margin: 0 0 25px;
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.worker-success-popup button {
+  min-width: 100px;
+  padding: 11px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.worker-success-popup button:hover {
+  background-color: #256628;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+
+  .manage-workers-page {
+    padding: 25px 15px;
+  }
+
+  .manage-workers-form {
+    padding: 20px;
+  }
+
+  .manage-workers-header h1 {
+    font-size: 23px;
+  }
+
+  .form-buttons {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .cancel-worker-button,
+  .save-worker-button {
+    width: 100%;
+  }
+}

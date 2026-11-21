@@ -1,0 +1,213 @@
+.register-clinic-page {
+  min-height: 100vh;
+  background-color: #f7fbff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.register-clinic-container {
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border: 1px solid #e1e8ef;
+  padding: 40px;
+}
+
+.register-clinic-header {
+  margin-bottom: 30px;
+}
+
+.register-clinic-header p {
+  margin: 0 0 6px;
+  color: #1565c0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.register-clinic-header h1 {
+  margin: 0 0 8px;
+  color: #222222;
+  font-size: 25px;
+}
+
+.register-clinic-header span {
+  color: #777777;
+  font-size: 13px;
+}
+
+.register-clinic-form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #d7e0e8;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 13px;
+  outline: none;
+}
+
+.form-group input:focus {
+  border-color: #1565c0;
+}
+
+.form-group input::placeholder {
+  color: #aaaaaa;
+}
+
+.error-message {
+  margin: 0 0 20px;
+  color: #c62828;
+  font-size: 13px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.form-buttons button {
+  padding: 11px 20px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-clinic-button {
+  background-color: #eeeeee;
+  color: #333333;
+}
+
+.cancel-clinic-button:hover {
+  background-color: #dddddd;
+}
+
+.save-clinic-button {
+  background-color: #1565c0;
+  color: #ffffff;
+}
+
+.save-clinic-button:hover {
+  background-color: #0d47a1;
+}
+
+/* Success Popup */
+
+.clinic-success-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+
+.clinic-success-popup {
+  width: 400px;
+  max-width: 90%;
+  background-color: #ffffff;
+  border-top: 5px solid #1565c0;
+  padding: 35px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.clinic-success-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.clinic-success-popup h2 {
+  margin: 0 0 10px;
+  color: #333333;
+  font-size: 22px;
+}
+
+.clinic-success-popup p {
+  margin: 0 0 25px;
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.clinic-success-popup button {
+  min-width: 100px;
+  padding: 11px 25px;
+  border: none;
+  background-color: #1565c0;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.clinic-success-popup button:hover {
+  background-color: #0d47a1;
+}
+
+@media (max-width: 600px) {
+  .register-clinic-page {
+    padding: 15px;
+  }
+
+  .register-clinic-container {
+    padding: 25px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+  }
+
+  .form-buttons button {
+    width: 100%;
+  }
+}
+.back-button {
+  margin-bottom: 25px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #1565c0;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}

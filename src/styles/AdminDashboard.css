@@ -1,0 +1,590 @@
+/* ================================
+   ADMIN DASHBOARD
+================================ */
+
+.admin-dashboard {
+  min-height: 100vh;
+  background-color: #f8fbff;
+  display: flex;
+  color: #1f2937;
+}
+
+/* Logout Confirmation Popup */
+
+.logout-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.logout-popup {
+  width: 400px;
+  max-width: 90%;
+  background-color: #ffffff;
+  border-top: 5px solid #1565c0;
+  padding: 35px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.logout-popup-icon {
+  width: 55px;
+  height: 55px;
+  margin: 0 auto 18px;
+  background-color: #e3f2fd;
+  color: #1565c0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logout-popup h2 {
+  margin: 0 0 10px;
+  color: #333333;
+  font-size: 22px;
+}
+
+.logout-popup p {
+  margin: 0 0 25px;
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.logout-popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.logout-popup-buttons button {
+  min-width: 100px;
+  padding: 11px 25px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-no-button {
+  background-color: #eeeeee;
+  color: #333333;
+}
+
+.logout-no-button:hover {
+  background-color: #dddddd;
+}
+
+.logout-yes-button {
+  background-color: #1565c0;
+  color: #ffffff;
+}
+
+.logout-yes-button:hover {
+  background-color: #0d47a1;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.admin-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #e1eaf2;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+/* Brand */
+
+.sidebar-brand {
+  height: 80px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #e1eaf2;
+}
+
+.brand-icon {
+  width: 38px;
+  height: 38px;
+  background-color: #1565c0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.sidebar-brand h2 {
+  font-size: 15px;
+  margin: 0;
+  color: #1f2937;
+}
+
+.sidebar-brand span {
+  display: block;
+  font-size: 12px;
+  color: #7a8794;
+  margin-top: 3px;
+}
+
+
+/* Navigation */
+
+.sidebar-navigation {
+  padding: 25px 14px;
+  flex: 1;
+}
+
+.sidebar-heading {
+  font-size: 10px;
+  font-weight: 700;
+  color: #8a97a5;
+  letter-spacing: 1px;
+  margin: 0 10px 12px;
+}
+
+.sidebar-link {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #596775;
+  padding: 11px 12px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sidebar-link:hover {
+  background-color: #f1f7fd;
+  color: #1565c0;
+}
+
+.sidebar-link.active {
+  background-color: #eaf3fc;
+  color: #1565c0;
+  font-weight: 600;
+}
+
+.sidebar-icon {
+  width: 20px;
+  text-align: center;
+  font-size: 17px;
+}
+
+
+/* ================================
+   SIDEBAR BOTTOM
+================================ */
+
+.sidebar-bottom {
+  padding: 15px;
+  border-top: 1px solid #e1eaf2;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 5px 15px;
+}
+
+.profile-icon,
+.header-user-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #eaf3fc;
+  color: #1565c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.admin-profile strong {
+  display: block;
+  font-size: 12px;
+  color: #333;
+}
+
+.admin-profile span {
+  display: block;
+  font-size: 11px;
+  color: #8a97a5;
+  margin-top: 3px;
+}
+
+.logout-button {
+  width: 100%;
+  border: 1px solid #e1eaf2;
+  background-color: white;
+  color: #596775;
+  padding: 9px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: left;
+}
+
+.logout-button:hover {
+  background-color: #f8fbff;
+  color: #1565c0;
+}
+
+
+/* ================================
+   MAIN AREA
+================================ */
+
+.admin-main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.admin-header {
+  height: 80px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1eaf2;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-label {
+  color: #1565c0;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 4px;
+}
+
+.admin-header h1 {
+  font-size: 23px;
+  margin: 0;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.header-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-user strong {
+  display: block;
+  font-size: 13px;
+  color: #333;
+}
+
+.header-user span {
+  display: block;
+  font-size: 11px;
+  color: #8a97a5;
+  margin-top: 3px;
+}
+
+
+/* ================================
+   DASHBOARD CONTENT
+================================ */
+
+.admin-content {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 70px 40px;
+}
+
+.dashboard-overview {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+
+/* Overview Heading */
+
+.overview-label {
+  color: #1565c0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0 8px;
+}
+
+.dashboard-overview h2 {
+  font-size: 25px;
+  font-weight: 600;
+  color: #273444;
+  margin: 0 0 8px;
+}
+
+.overview-description {
+  color: #7a8794;
+  font-size: 14px;
+  margin: 0 0 40px;
+}
+
+
+/* ================================
+   STATISTICS
+================================ */
+
+.admin-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: left;
+}
+
+.summary-item {
+  background-color: #ffffff;
+  border: 1px solid #e1eaf2;
+  padding: 22px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-height: 110px;
+  transition: 0.2s;
+}
+
+.summary-item:hover {
+  border-color: #c4d9eb;
+}
+
+.summary-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #eaf3fc;
+  color: #1565c0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  font-size: 17px;
+  flex-shrink: 0;
+}
+
+.summary-item span {
+  display: block;
+  font-size: 12px;
+  color: #7a8794;
+  margin-bottom: 5px;
+}
+
+.summary-item strong {
+  display: block;
+  font-size: 26px;
+  color: #273444;
+  line-height: 1.2;
+}
+
+.summary-item small {
+  display: block;
+  color: #9aa5af;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+.summary-item .status-text {
+  color: #2e7d32;
+  font-size: 19px;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1000px) {
+
+  .admin-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .admin-sidebar {
+    width: 70px;
+  }
+
+  .sidebar-brand {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .sidebar-brand > div:last-child,
+  .sidebar-heading {
+    display: none;
+  }
+
+  .sidebar-link {
+    justify-content: center;
+    padding: 12px;
+    font-size: 0;
+  }
+
+  .sidebar-icon {
+    font-size: 17px;
+  }
+
+  .admin-profile {
+    justify-content: center;
+  }
+
+  .admin-profile > div:last-child {
+    display: none;
+  }
+
+  .logout-button {
+    text-align: center;
+    font-size: 0;
+  }
+
+  .admin-main {
+    margin-left: 70px;
+    width: calc(100% - 70px);
+  }
+
+  .admin-header {
+    padding: 0 20px;
+  }
+
+  .header-user > div:last-child {
+    display: none;
+  }
+
+  .admin-content {
+    padding: 50px 20px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .admin-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-overview h2 {
+    font-size: 22px;
+  }
+
+  .overview-description {
+    margin-bottom: 30px;
+  }
+
+}
+
+
+@media (max-width: 450px) {
+
+  .admin-sidebar {
+    width: 55px;
+  }
+
+  .admin-main {
+    margin-left: 55px;
+    width: calc(100% - 55px);
+  }
+
+  .admin-header {
+    height: 70px;
+    padding: 0 15px;
+  }
+
+  .admin-header h1 {
+    font-size: 19px;
+  }
+
+  .admin-content {
+    min-height: calc(100vh - 70px);
+    padding: 40px 15px;
+  }
+  /* ================================
+     TOAST MESSAGE
+  ================================ */
+
+  .admin-toast {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: #ffffff;
+    border: 1px solid #d7e5f1;
+    border-left: 4px solid #2e7d32;
+    padding: 14px 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    color: #374151;
+    font-size: 13px;
+    z-index: 9999;
+  }
+
+  .toast-icon {
+    width: 24px;
+    height: 24px;
+    background-color: #eaf6ec;
+    color: #2e7d32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
+
+    .admin-toast {
+      left: 15px;
+      right: 15px;
+      bottom: 20px;
+    }
+
+  }
+
+}
